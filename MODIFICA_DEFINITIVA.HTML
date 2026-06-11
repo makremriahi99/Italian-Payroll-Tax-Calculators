@@ -1,0 +1,144 @@
+<h2>Introduzione</h2>
+Il <strong>calcolatore dello stipendio netto online</strong> ti permette di <strong>calcolare in modo semplice e gratuito il tuo stipendio netto mensile</strong> partendo dal lordo annuale, dalla tipologia di contratto e dalle detrazioni applicabili. Uno strumento utile per chi ha bisogno di conoscere l'importo reale che riceverà in busta paga senza doversi affidare a calcoli manuali complessi o tabelle fiscali.
+<h2>Cos'è</h2>
+Lo <strong>stipendio netto</strong> è l'importo effettivo che ricevi in busta paga dopo aver sottratto dal lordo annuale (RAL) i contributi previdenziali INPS, l'IRPEF, le addizionali regionali e comunali, e dopo aver applicato le detrazioni fiscali spettanti.
+<h2>A cosa serve</h2>
+Conoscere il proprio stipendio netto è fondamentale per pianificare il budget familiare, valutare una nuova offerta di lavoro o comprendere l'impatto di un aumento retributivo. <strong>Questo calcolatore ti consente di ottenere una stima attendibile del netto mensile, applicando le aliquote IRPEF 2025, i contributi previdenziali e il taglio del cuneo fiscale secondo la normativa vigente.</strong>
+<h2>Come funziona</h2>
+Inserisci i seguenti dati:
+<ol>
+<li><strong>Retribuzione annua lorda (RAL)</strong></li>
+<li><strong>Numero di mensilità (12, 13 o 14)</strong></li>
+<li><strong>Aliquota INPS lavoratore</strong></li>
+<li><strong>Regione e Provincia di residenza</strong></li>
+<li><strong>Detrazioni fiscali applicabili</strong></li>
+</ol>
+Nei campi richiesti il sistema calcolerà automaticamente il tuo stipendio netto mensile. <strong>Il risultato viene generato istantaneamente e può essere consultato per diverse simulazioni</strong>. Il calcolatore non memorizza alcun dato: tutte le elaborazioni avvengono in locale, garantendo la tua privacy.
+<h2>Perché usarlo</h2>
+<ul>
+<li><strong>Veloce e gratuito</strong>: ottieni il risultato in tempo reale con le aliquote IRPEF 2025 aggiornate. Niente calcoli manuali complessi o consulenze costose.</li>
+<li><strong>Sicuro</strong>: i dati vengono elaborati solo nel tuo browser, senza alcuna memorizzazione su server esterni. Nessuno può accedere alle tue informazioni economiche.</li>
+<li><strong>Accessibile</strong>: funziona perfettamente da desktop, tablet e smartphone. Puoi calcolare il tuo stipendio netto anche in mobilità, dove e quando ti serve.</li>
+<li><strong>Preciso e aggiornato</strong>: applica le aliquote IRPEF 2025 (23%, 35%, 43%), i contributi INPS corretti e le addizionali regionali e comunali ufficiali.</li>
+<li><strong>Completo</strong>: include il calcolo del cuneo fiscale 2025 (detrazione di 1.000€ per redditi tra 20.000€ e 40.000€) e il bonus IRPEF di 100€/mese per redditi fino a 28.000€.</li>
+<li><strong>Ideale per comparazioni</strong>: perfetto per confrontare diverse offerte di lavoro o valutare l'impatto di un cambio di residenza sullo stipendio netto.</li>
+<li><strong>Utile per professionisti</strong>: HR manager, consulenti del lavoro e addetti alle paghe possono effettuare simulazioni rapide per dipendenti e candidati.</li>
+</ul>
+<div class="cf-container">
+<div class="cf-inner">
+<h2>Calcolatore Stipendio Netto 2025</h2>
+<p style="color: #6b7280; font-size: 0.92rem; text-align: center; margin-bottom: 30px;">
+Calcolo basato su aliquote IRPEF 2025 (23% / 35% / 43%), contributi INPS lavoratore e addizionali. Alcune detrazioni sono semplificate/modificabili.
+</p>
+<div class="form-section">
+<label for="ral">Retribuzione annua lorda (RAL) </label>
+<input type="text" id="ral" placeholder="€">
+</div>
+<div class="form-section">
+<label for="mensilita" style="margin-top: 20px;">Numero di mensilità</label>
+<select id="mensilita">
+<option value="12"selected>12</option>
+<option value="13">13</option>
+<option value="14">14</option>
+</select>
+</div>
+<div class="form-section">
+<label for="inps" style="margin-top: 20px;">Aliquota INPS lavoratore</label>
+<select id="inps">
+<option value="9.19" selected>9,19% (standard)</option>
+<option value="5.84">5,84% (apprendistato)</option>
+<option value="9.49">9,49% (aziende >15 dip.)</option>
+<option value="8.8">8,8% (dipendenti pubblici)</option>
+<option value="custom">Personalizzata…</option>
+</select>
+</div>
+<div class="form-section">
+<label for="inpsCustom" style="margin-top: 20px;">INPS personalizzata</label>
+<input type="text" id="inpsCustom" placeholder="%" disabled>
+</div>
+<div class="form-section">
+<label for="regione" style="margin-top: 20px;">Regione di residenza</label>
+<select id="regione">
+</select>
+</div>
+<div class="form-section">
+<label for="comune" style="margin-top: 20px;">Provincia di residenza</label>
+<select id="comune">
+</select>
+</div>
+<div id="warningComune" style="display: none; margin-top: 15px;">
+<div class="form-section" style="display: flex; align-items: center; gap: 8px;">
+<label for="customComune" style="margin: 0; flex: 1;">Aliquota comunale personalizzata (%)</label>
+<input type="text" id="customComune" placeholder="0.8" value="0.8" style="width: 100px;">
+<span style="color: #6b7280;">%</span>
+</div>
+<p style="color: #9a3412; font-size: 0.85rem; margin-top: 5px;">
+Nessuna informazione per questo comune. Inserisci coefficiente Irpef comunale o lascia il nostro valore di default (0.8%).
+</p>
+</div>
+<div class="form-section">
+<label for="aliquotaRegionale" style="margin-top: 20px;">Aliquota regionale personalizzata</label>
+<input type="text" id="aliquotaRegionale" placeholder="%" disabled>
+<p style="color: #6b7280; font-size: 0.85rem; margin-top: 5px;">
+Usa questa opzione solo se selezioni "Personalizzata (aliquota unica)" come regione.
+</p>
+</div>
+<div class="form-section">
+<label for="aliquotaComunale" style="margin-top: 20px;">Addizionale comunale personalizzata <strong><a class="cta-button"href="https://www1.finanze.gov.it/finanze2/dipartimentopolitichefiscali/fiscalitalocale/nuova_addcomirpef/sceltaregione.htm">(cerca)</a> </strong></label>
+<input type="text" id="aliquotaComunale" placeholder="es. 0.2">
+<p style="color: #6b7280; font-size: 0.85rem; margin-top: 5px;">
+Usa questa opzione solo se non selezioni un comune dalla lista.
+</p>
+</div>
+<div class="form-section" style="margin-bottom: 15px;">
+  <input type="checkbox" id="applicaCuneo" style="width: auto; margin: -22; vertical-align: bottom;">
+  <label for="applicaCuneo" style="margin: 25; font-weight: 500; text-transform: none; vertical-align: middle; display: ruby;">
+    Detrazione cuneo fiscale 2025 (1.000€ tra 20k e 40k)
+  </label>
+</div>
+
+<div class="form-section" style="margin-bottom: 15px;">
+  <input type="checkbox" id="applicaBonus" style="width: auto; margin: -22; vertical-align: bottom;">
+  <label for="applicaBonus" style="margin: 25; font-weight: 500; text-transform: none; vertical-align: middle; display: ruby;">
+    Bonus IRPEF 100€/mese (fino a 28.000€): 1.200€/anno
+  </label>
+</div>
+<button id="but">Calcola stipendio netto</button>
+<div style="background: #f0f9ff; border: 1px solid #bae6fd; color: #075985; border-radius: 8px; padding: 15px; margin: 20px 0; font-size: 0.9rem; line-height: 1.6;">
+<strong>Nota:</strong> Le addizionali regionali e comunali vengono calcolate automaticamente in base alla regione e al comune selezionati, utilizzando le aliquote ufficiali 2025. Se il comune non è presente nella lista, puoi inserire manualmente l'aliquota comunale.
+</div>
+<div id="display" style="margin-top: 30px;">
+<h2 style="text-align: center; margin-bottom: 20px;">Risultati</h2>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-bottom: 20px;">
+<div style="background: white; padding: 15px; border-radius: 8px; border: 2px solid #e2e8f0;">
+<div style="font-size: 0.85rem; color: #6b7280; margin-bottom: 5px;">Imponibile IRPEF</div>
+<div id="imponibile" style="font-size: 1.3rem; font-weight: 700; color: #1f2937;">—</div>
+</div>
+<div style="background: white; padding: 15px; border-radius: 8px; border: 2px solid #e2e8f0;">
+<div style="font-size: 0.85rem; color: #6b7280; margin-bottom: 5px;">IRPEF lorda</div>
+<div id="irpefLorda" style="font-size: 1.3rem; font-weight: 700; color: #1f2937;">—</div>
+</div>
+<div style="background: white; padding: 15px; border-radius: 8px; border: 2px solid #e2e8f0;">
+<div style="font-size: 0.85rem; color: #6b7280; margin-bottom: 5px;">IRPEF dovuta</div>
+<div id="irpefDovuta" style="font-size: 1.3rem; font-weight: 700; color: #1f2937;">—</div>
+</div>
+<div style="background: #f0fdf4; padding: 15px; border-radius: 8px; border: 2px solid #86efac;">
+<div style="font-size: 0.85rem; color: #166534; margin-bottom: 5px;">Netto annuo</div>
+<div id="nettoAnnuo" style="font-size: 1.3rem; font-weight: 700; color: #15803d;">—</div>
+</div>
+<div style="background: #f0fdf4; padding: 15px; border-radius: 8px; border: 2px solid #86efac;">
+<div style="font-size: 0.85rem; color: #166534; margin-bottom: 5px;">Netto mensile</div>
+<div id="nettoMensile" style="font-size: 1.3rem; font-weight: 700; color: #15803d;">—</div>
+</div>
+</div>
+<table style="width: 100%; border-collapse: collapse; margin-top: 20px; background: white; border-radius: 8px; overflow: hidden;">
+<tbody id="dettaglio"></tbody>
+</table>
+</div>
+<div class="error-message" id="errorMessage">
+Inserisci una RAL valida per calcolare lo stipendio netto.
+</div>
+</div>
+</div>
+
+Trasforma i dati in decisioni. Inizia dalla tua carriera. <strong><a class="cta-button" href="https://calendly.com/d/37h-76t-bgh/check-up-gratuito-career-coaching?source=jobiri">Prenota il tuo check-up gratuito</a></strong> con Jobiri per analizzare il tuo percorso, individuare nuove opportunità e costruire una strategia professionale su misura per te.

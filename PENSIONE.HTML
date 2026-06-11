@@ -1,0 +1,139 @@
+<h2>Introduzione</h2>
+Il <strong>calcolatore della pensione online</strong> ti permette di <strong>calcolare in modo semplice e gratuito quando potrai andare in pensione</strong> e stimare l'importo mensile della tua futura pensione. Uno strumento utile per pianificare il tuo futuro previdenziale basato sulla normativa italiana vigente.
+
+<h2>Cos'è</h2>
+Il <strong>calcolatore di pensione</strong> è uno strumento che ti aiuta a determinare l'età pensionabile, gli anni mancanti al pensionamento e una stima dell'assegno pensionistico mensile basato sui tuoi contributi versati e sulla retribuzione media.
+
+<h2>A cosa serve</h2>
+Conoscere quando potrai andare in pensione e stimare l'importo è fondamentale per pianificare il tuo futuro finanziario, valutare se integrare con fondi pensione privati o decidere quando cessare l'attività lavorativa. <strong>Questo calcolatore applica le regole previdenziali italiane 2025, considerando pensione di vecchiaia e pensione anticipata.</strong>
+
+<h2>Come funziona</h2>
+Inserisci i seguenti dati:
+<ol>
+<li><strong>Data di nascita</strong></li>
+<li><strong>Sesso (Uomo/Donna)</strong></li>
+<li><strong>Anni di contributi già versati</strong></li>
+<li><strong>Retribuzione media annua lorda</strong></li>
+<li><strong>Tipologia di lavoratore</strong></li>
+</ol>
+Il sistema calcolerà automaticamente quando potrai andare in pensione e l'importo stimato mensile. <strong>Il risultato viene generato istantaneamente</strong>. Il calcolatore non memorizza alcun dato: tutte le elaborazioni avvengono in locale, garantendo la tua privacy.
+
+<h2>Perché usarlo</h2>
+<ul>
+<li><strong>Veloce e gratuito</strong>: ottieni il risultato in tempo reale con le normative previdenziali 2025 aggiornate.</li>
+<li><strong>Sicuro</strong>: i dati vengono elaborati solo nel tuo browser, senza alcuna memorizzazione su server esterni.</li>
+<li><strong>Accessibile</strong>: funziona perfettamente da desktop, tablet e smartphone.</li>
+<li><strong>Preciso e aggiornato</strong>: applica le regole INPS 2025 per pensione di vecchiaia (67 anni) e pensione anticipata.</li>
+<li><strong>Completo</strong>: considera il sistema contributivo, retributivo e misto in base alla tua anzianità contributiva.</li>
+<li><strong>Ideale per pianificazione</strong>: perfetto per valutare quando potrai smettere di lavorare e quanto riceverai.</li>
+</ul>
+
+<div class="cf-container">
+    <div class="cf-inner">
+        <h2>Calcolatore Pensione 2025</h2>
+        <p style="color: #6b7280; font-size: 0.92rem; text-align: center; margin-bottom: 30px;">
+            Calcolo basato su normativa INPS 2025. Età pensione di vecchiaia: 67 anni. Pensione anticipata: 42 anni e 10 mesi (U) / 41 anni e 10 mesi (D).
+        </p>
+        
+        <div class="form-section">
+            <label for="birthDate">Data di nascita</label>
+            <input type="date" id="birthDate" max="2007-12-31">
+        </div>
+        
+        <div class="form-section">
+            <label for="gender">Sesso</label>
+            <select id="gender" required>
+                <option value="" disabled selected>Seleziona...</option>
+                <option value="M">Uomo</option>
+                <option value="F">Donna</option>
+            </select>
+        </div>
+        
+        <div class="form-section">
+            <label for="yearsContributed">Anni di contributi già versati</label>
+            <input type="text" id="yearsContributed" placeholder="es. 25">
+            <p style="color: #6b7280; font-size: 0.85rem; margin-top: 5px;">
+                Inserisci il numero totale di anni contributivi maturati (anche frazioni, es. 25.5)
+            </p>
+        </div>
+        
+        <div class="form-section">
+            <label for="avgSalary">Retribuzione media annua lorda (€)</label>
+            <input type="text" id="avgSalary" placeholder="€ 30.000">
+            <p style="color: #6b7280; font-size: 0.85rem; margin-top: 5px;">
+                Inserisci la media delle tue retribuzioni lorde annue degli ultimi anni
+            </p>
+        </div>
+        
+        <div class="form-section">
+            <label for="workerType">Tipologia di lavoratore</label>
+            <select id="workerType">
+                <option value="dipendente" selected>Dipendente privato</option>
+                <option value="pubblico">Dipendente pubblico</option>
+                <option value="autonomo">Lavoratore autonomo</option>
+            </select>
+        </div>
+        
+        <div class="form-section" style="display: flex; align-items: center; gap: 8px;">
+            <input type="checkbox" id="considerAnticipata" style="width: auto; margin: 0;" checked>
+            <label for="considerAnticipata" style="margin: 0; font-weight: 500; text-transform: none;">
+                Considera anche la pensione anticipata
+            </label>
+        </div>
+        
+        <button id="but">Calcola la tua pensione</button>
+        
+        <div style="background: #f0f9ff; border: 1px solid #bae6fd; color: #075985; border-radius: 8px; padding: 15px; margin: 20px 0; font-size: 0.9rem; line-height: 1.6;">
+            <strong>Nota:</strong> Il calcolo della pensione è una stima indicativa basata sulla normativa INPS 2025. L'importo effettivo dipenderà dall'intera storia contributiva e dalle rivalutazioni future.
+        </div>
+        
+        <div id="display" style="margin-top: 30px;">
+            <h2 style="text-align: center; margin-bottom: 20px;">Risultati</h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 15px; margin-bottom: 20px;">
+                <div style="background: white; padding: 15px; border-radius: 8px; border: 2px solid #e2e8f0;">
+                    <div style="font-size: 0.85rem; color: #6b7280; margin-bottom: 5px;">Età attuale</div>
+                    <div id="etaAttuale" style="font-size: 1.3rem; font-weight: 700; color: #1f2937;">—</div>
+                </div>
+                
+                <div style="background: #fff7ed; padding: 15px; border-radius: 8px; border: 2px solid #fed7aa;">
+                    <div style="font-size: 0.85rem; color: #9a3412; margin-bottom: 5px;">Età pensionabile</div>
+                    <div id="etaPensionabile" style="font-size: 1.3rem; font-weight: 700; color: #1f2937;">—</div>
+                </div>
+                
+                <div style="background: #fef3c7; padding: 15px; border-radius: 8px; border: 2px solid #fcd34d;">
+                    <div style="font-size: 0.85rem; color: #78350f; margin-bottom: 5px;">Anni mancanti</div>
+                    <div id="anniMancanti" style="font-size: 1.3rem; font-weight: 700; color: #1f2937;">—</div>
+                </div>
+                
+                <div style="background: #f0fdf4; padding: 15px; border-radius: 8px; border: 2px solid #86efac;">
+                    <div style="font-size: 0.85rem; color: #166534; margin-bottom: 5px;">Data pensionamento</div>
+                    <div id="dataPensionamento" style="font-size: 1.1rem; font-weight: 700; color: #15803d;">—</div>
+                </div>
+            </div>
+            
+            <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 25px; border-radius: 12px; margin: 20px 0; box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);">
+                <div style="font-size: 0.9rem; color: #1f2937; margin-bottom: 8px; font-weight: 500;">Pensione mensile stimata (netto)</div>
+                <div id="pensioneMensile" style="font-size: 2.2rem; font-weight: 800; color: white;">—</div>
+                <div id="pensioneAnnua" style="font-size: 1rem; color: #e0e7ff; margin-top: 8px; font-weight: 500;">—</div>
+            </div>
+            
+            <div id="dettaglioAnticipata" style="display: none; background: #fef3c7; border: 2px solid #fbbf24; padding: 20px; border-radius: 10px; margin: 20px 0;">
+                <h3 style="margin-top: 0; color: #78350f; font-size: 1.1rem;"> Pensione Anticipata</h3>
+                <div id="infoAnticipata"></div>
+            </div>
+            
+            <table style="width: 100%; border-collapse: collapse; margin-top: 20px; background: white; border-radius: 8px; overflow: hidden;">
+                <tbody id="dettaglio"></tbody>
+            </table>
+        </div>
+        
+        <div class="error-message" id="errorMessage">
+            Compila tutti i campi obbligatori per calcolare la pensione.
+        </div>
+    </div>
+</div>
+
+<small><em>I risultati forniti da questo calcolatore hanno finalità puramente indicative. Pur essendo basati su normative aggiornate, potrebbero contenere imprecisioni. Per informazioni ufficiali, consulta l'INPS o un consulente previdenziale.</em></small>
+
+Trasforma i dati in decisioni. Inizia dalla tua carriera. <strong><a class="cta-button" href="https://calendly.com/d/37h-76t-bgh/check-up-gratuito-career-coaching?source=jobiri">Prenota il tuo check-up gratuito</a></strong> con Jobiri per analizzare il tuo percorso, individuare nuove opportunità e costruire una strategia professionale su misura per te.

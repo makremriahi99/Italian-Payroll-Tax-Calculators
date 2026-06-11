@@ -1,0 +1,246 @@
+.cf-container {
+    margin: 40px 0;
+}
+
+.cf-inner {
+    background: white;
+    border-radius: 12px;
+    padding: 45px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e5e7eb;
+}
+
+.cf-container h2 {
+    text-align: center;
+}
+
+.cf-container label {
+    font-weight: 600;
+    margin-bottom: 12px;
+    display: block;
+    text-transform: uppercase;
+}
+
+.cf-container input[type="text"],
+.cf-container input[type="date"],
+.cf-container select {
+    width: 100%;
+    padding: 14px 18px;
+    border-radius: 8px;
+    border: 2px solid #e2e8f0;
+    box-shadow: none;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+    background: #f8fafc;
+}
+
+/* Stile del select Sesso */
+#gender {
+    height: 50px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+#gender:focus {
+    border-color: var(--jobiri-button-primary);
+    /* stato focus */
+    background: white;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+    outline: none;
+}
+
+/* Placeholder grigio finché non selezionato */
+#gender:required:invalid {
+    color: #94a3b8;
+}
+
+#gender option[value=""] {
+    color: #94a3b8;
+}
+
+.cf-container input[type="text"]:focus,
+.cf-container input[type="date"]:focus {
+    border-color: var(--jobiri-button-primary);
+    background: white;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+    outline: none;
+}
+
+.form-section {
+    margin-bottom: 20px;
+}
+
+#but {
+    width: 100%;
+    padding: 25px;
+    background: var(--jobiri-secondary-color);
+    border: none;
+    border-radius: 50px;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 1px;
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.25);
+    line-height: 0;
+    text-align: center;
+
+}
+
+#but:hover {
+    background: rgba(255, 88, 33, 0.7);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(59, 130, 246, 0.3);
+}
+
+#but:active {
+    transform: translateY(0);
+}
+
+#display {
+    padding: 20px;
+    background: #f1f5f9;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-align: center;
+    display: none;
+    letter-spacing: 3px;
+    font-family: 'Courier New', Consolas, monospace;
+    border: 2px solid #cbd5e1;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#display.show {
+    display: block;
+}
+
+.error-message {
+    color: #dc2626;
+    background: #fef2f2;
+    padding: 14px 18px;
+    border-radius: 8px;
+    margin-top: 20px;
+    display: none;
+    border-left: 4px solid #dc2626;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.error-message.show {
+    display: block;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .cf-container {
+        padding: 30px 15px;
+        margin: 20px 0;
+    }
+
+    .cf-inner {
+        padding: 30px 20px;
+    }
+
+    .cf-container h1 {
+        font-size: 1.8rem;
+    }
+
+    #display {
+        font-size: 1.2rem;
+        letter-spacing: 2px;
+        padding: 20px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    #display {
+        font-size: 1rem;
+        letter-spacing: 1.5px;
+    }
+}
+
+/* ---------- Utility layout per contenuti dentro <article> ---------- */
+
+.article-flex {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.article-center {
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+.article-left {
+    text-align: left;
+}
+
+.article-right {
+    text-align: right;
+}
+
+.article-text-center {
+    text-align: center;
+}
+
+.article-spacing-sm {
+    margin: 1rem 0;
+}
+
+.article-spacing-md {
+    margin: 2rem 0;
+}
+
+.article-spacing-lg {
+    margin: 3rem 0;
+}
+
+.article-highlight {
+    background: rgba(0, 0, 0, 0.05);
+    padding: 1.5rem;
+    border-radius: 12px;
+}
+
+.article-pill {
+    display: inline-block;
+    padding: 0.4rem 1rem;
+    border-radius: 999px;
+    background: #e0f2ff;
+    color: #0369a1;
+    font-weight: 600;
+}
+
+.article-grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .article-grid-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .article-grid-3 {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}

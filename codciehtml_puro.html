@@ -1,0 +1,24 @@
+<div class="cf-container">
+    <div class="cf-inner">
+    <h2>Calcolo Codice Fiscale</h2>
+    <form id="cfForm">
+    <div class="form-section"><label for="frmNameA">Nome</label><input type="text" name="name" id="frmNameA" placeholder="Inserisci il tuo nome" autocomplete="given-name" required="" /></div>
+    <div class="form-section"><label for="frmNameB">Cognome</label><input type="text" name="surname" id="frmNameB" placeholder="Inserisci il tuo cognome" autocomplete="family-name" required="" /></div>
+    <div class="form-section"><label for="dateofbirth">Data di Nascita</label><input type="date" name="dateofbirth" id="dateofbirth" required="" /></div>
+    <div class="form-section"><label for="gender">Sesso</label><select id="gender" required="" style="width: 100%; padding: 14px 18px; border-radius: 8px; border: 2px solid #e2e8f0; background: #f8fafc; color: #1e293b; font-size: 1rem;">
+    <option value="" selected="selected">Seleziona…</option>
+    <option value="M">Maschio</option>
+    <option value="F">Femmina</option>
+    </select></div>
+    <div class="form-section"><label for="loc">Luogo di nascita</label><input type="text" name="from" placeholder="Scrivi il Comune o lo Stato Estero" required="" id="loc" list="comuniList" />
+    <datalist id="comuniList"></datalist></div>
+    <button type="button" id="but">
+    Calcola Codice Fiscale
+    </button>
+    </form>
+    <div id="errorMsg" class="error-message">
+    </div>
+    <div id="display">
+    </div>
+    </div>
+    </div>
