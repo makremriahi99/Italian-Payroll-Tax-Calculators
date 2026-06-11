@@ -1,69 +1,67 @@
-# Italian Payroll & Tax Calculators
+# Calcolatori Fiscali e Previdenziali Italiani
 
-A suite of **client-side web tools** for Italian fiscal and payroll calculations, built using the official 2025 INPS and IRPEF rules. All computations run entirely in the browser — no data is ever sent to a server.
+Suite di **strumenti web client-side** per calcoli fiscali e previdenziali italiani, basati sulle normative INPS e IRPEF 2025. Tutti i calcoli avvengono nel browser — nessun dato viene inviato a server esterni.
 
-## Tools
+## Strumenti
 
-### Stipendio Netto 2025 — Net Salary Calculator
-**Files:** `VERO_STIPENDIO_NETTO.HTML`, `VERO_STIPENDIO_NETTO.JS`, `VERO_STIPENDIO_NETTO.CSS`
+### Calcolatore Stipendio Netto 2025
+**File:** `VERO_STIPENDIO_NETTO.HTML`, `VERO_STIPENDIO_NETTO.JS`, `VERO_STIPENDIO_NETTO.CSS`
 
-Calculates the monthly net salary from a gross annual (RAL), applying:
-- IRPEF 2025 brackets: 23% / 35% / 43%
-- INPS employee contributions (9.19% standard, apprenticeship, public sector variants, or custom)
-- Regional and municipal add-ons — dropdown for every Italian region and municipality
-- Cuneo fiscale 2025 deduction (€1,000 for RAL between €20k–€40k)
-- IRPEF bonus €100/month for RAL up to €28,000
-- Outputs: IRPEF base, gross IRPEF, net IRPEF, annual net, monthly net
+Calcola lo stipendio netto mensile a partire dalla RAL (retribuzione annua lorda), applicando:
+- Aliquote IRPEF 2025: 23% / 35% / 43%
+- Contributi INPS lavoratore (9,19% standard, apprendistato, dipendenti pubblici, personalizzata)
+- Addizionali regionali e comunali — dropdown con tutte le regioni e i comuni italiani
+- Detrazione cuneo fiscale 2025 (€1.000 per RAL tra €20k–€40k)
+- Bonus IRPEF €100/mese per RAL fino a €28.000
+- Output: imponibile IRPEF, IRPEF lorda, IRPEF dovuta, netto annuo, netto mensile
 
-### Codice Fiscale — Italian Tax ID Generator
-**Files:** `VERO_CODICEFISCALE.HTML`, `VERO_CODICEFSICALE.JS`
+### Generatore Codice Fiscale
+**File:** `VERO_CODICEFISCALE.HTML`, `VERO_CODICEFSICALE.JS`
 
-Generates the 16-character Italian fiscal code from:
-- First and last name
-- Date of birth
-- Gender
-- Municipality or foreign country of birth (datalist with full Italian comuni)
+Genera il codice fiscale a 16 caratteri a partire da:
+- Nome e cognome
+- Data di nascita
+- Sesso
+- Comune o Stato estero di nascita (datalist con tutti i comuni italiani)
 
-Follows the official algorithm established by DM 12/03/1974 (Agenzia delle Entrate).
+Segue l'algoritmo ufficiale stabilito dal DM 12/03/1974 (Agenzia delle Entrate).
 
-### TFR — Severance Pay Calculator
+### Calcolatore TFR — Trattamento di Fine Rapporto
 **File:** `calcolotfr.js`
 
-Calculates *Trattamento di Fine Rapporto* based on:
-- Annual gross salary (RAL)
-- Years of service
-- Optional advances already received
-- Inflation coefficient and INPS revaluation
-- Outputs: annual accrual, gross TFR, revaluation, net TFR, available TFR
+Calcola il TFR in base a:
+- RAL annua
+- Anni di servizio
+- Eventuali anticipazioni già ricevute
+- Coefficiente di rivalutazione e inflazione INPS
+- Output: accantonamento annuale, TFR lordo, rivalutazione, TFR netto, TFR disponibile
 
-### Pensione — Retirement Estimator
+### Calcolatore Pensione
 **File:** `vai.html`
 
-Estimates the retirement date and monthly pension amount based on:
-- Date of birth and gender
-- Contribution years already paid
-- Average gross salary
-- Worker type (employee, autonomous)
-- Italian 2025 INPS rules: old-age pension (67 years) and early retirement
+Stima la data di pensionamento e l'assegno mensile in base a:
+- Data di nascita e sesso
+- Anni di contributi già versati
+- Retribuzione media lorda annua
+- Tipologia lavoratore (dipendente, autonomo)
+- Regole INPS 2025: pensione di vecchiaia (67 anni) e pensione anticipata
 
-## Architecture
+## Struttura file
 
-All tools are self-contained HTML + JavaScript components. The HTML files are designed as embeddable fragments for CMS integration (WordPress, etc.) as well as standalone pages.
-
-| File | Tool |
+| File | Strumento |
 |---|---|
-| `VERO_STIPENDIO_NETTO.HTML` | Net salary form (final version) |
-| `VERO_STIPENDIO_NETTO.JS` | Net salary calculation engine |
-| `VERO_STIPENDIO_NETTO.CSS` | Net salary styles |
-| `VERO_CODICEFISCALE.HTML` | Codice fiscale form (final version) |
-| `VERO_CODICEFSICALE.JS` | Fiscal code generation algorithm |
-| `calcolotfr.js` | TFR calculation engine |
-| `vai.html` | Pension estimator |
-| `MODIFICA_DEFINITIVA.HTML` | Net salary alternative layout |
-| `PENSIONE.HTML` / `PENSIONANUOVA.HTML` | Pension calculator variants |
-| `netto.html` / `NETTO.JS` | Earlier net salary iterations |
-| `cf.html` / `codice.html` | Earlier codice fiscale iterations |
+| `VERO_STIPENDIO_NETTO.HTML` | Form stipendio netto (versione finale) |
+| `VERO_STIPENDIO_NETTO.JS` | Motore di calcolo stipendio |
+| `VERO_STIPENDIO_NETTO.CSS` | Stili calcolatore stipendio |
+| `VERO_CODICEFISCALE.HTML` | Form codice fiscale (versione finale) |
+| `VERO_CODICEFSICALE.JS` | Algoritmo generazione codice fiscale |
+| `calcolotfr.js` | Motore di calcolo TFR |
+| `vai.html` | Calcolatore pensione |
+| `MODIFICA_DEFINITIVA.HTML` | Layout alternativo stipendio netto |
+| `PENSIONE.HTML` / `PENSIONANUOVA.HTML` | Varianti calcolatore pensione |
+| `netto.html` / `NETTO.JS` | Versioni precedenti stipendio netto |
+| `cf.html` / `codice.html` | Versioni precedenti codice fiscale |
 
-## Topics
+## Tag
 
-`javascript` `html` `css` `italian` `tax-calculator` `irpef` `inps` `payroll` `codice-fiscale` `tfr` `pension` `2025`
+`javascript` `html` `css` `italiano` `irpef` `inps` `stipendio-netto` `codice-fiscale` `tfr` `pensione` `2025`
